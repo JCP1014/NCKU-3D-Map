@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+main{
+	display:flex;
+}
+
+.w3-button{
+	max-height: 2.7rem;
+}
+
+.haveoverflow{
+	max-height: 32rem;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+}
+
+</style>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card" style="height:40px">
+	<font class="w3-left" color="white" size="6" face="monospace" style="margin-left:8px">NCKU 3D Map</font>
+    <div class="w3-dropdown-hover w3-hide-small" style="margin-left:50px">
+      <button class="w3-padding-large w3-button"> Department <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button" onclick="classroom_csie()">CSIE</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button"> Classroom <i class="fa fa-caret-down"></i></button>     
+      <div class="haveoverflow w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" id="a1" class="w3-bar-item w3-button" onclick="classroom_search('651')" style="display:none">65101</a>
+        <a href="#" id="a2" class="w3-bar-item w3-button" onclick="classroom_search('651')" style="display:none">65102</a>
+        <a href="#" id="a3" class="w3-bar-item w3-button" onclick="classroom_search('651')" style="display:none">65103</a>
+        <a href="#" id="a4" class="w3-bar-item w3-button" onclick="classroom_search('651')" style="display:none">65104</a>
+        <a href="#" id="a5" class="w3-bar-item w3-button" onclick="classroom_search('651')" style="display:none">65105</a>
+        <a href="#" id="a6" class="w3-bar-item w3-button" onclick="classroom_search('652')" style="display:none">65201</a>
+        <a href="#" id="a7" class="w3-bar-item w3-button" onclick="classroom_search('652')" style="display:none">65202</a>
+        <a href="#" id="a8" class="w3-bar-item w3-button" onclick="classroom_search('652')" style="display:none">65203</a>
+        <a href="#" id="a9" class="w3-bar-item w3-button" onclick="classroom_search('652')" style="display:none">65204</a>
+        <a href="#" id="a10" class="w3-bar-item w3-button" onclick="classroom_search('652')" style="display:none">65205</a>
+        <a href="#" id="a11" class="w3-bar-item w3-button" onclick="classroom_search('652')" style="display:none">65206</a>
+        <a href="#" id="a12" class="w3-bar-item w3-button" onclick="classroom_search('652')" style="display:none">65207</a>
+        <a href="#" id="a13" class="w3-bar-item w3-button" onclick="classroom_search('653')" style="display:none">65301</a>
+        <a href="#" id="a14" class="w3-bar-item w3-button" onclick="classroom_search('653')" style="display:none">65302</a>
+        <a href="#" id="a15" class="w3-bar-item w3-button" onclick="classroom_search('653')" style="display:none">65303</a>
+        <a href="#" id="a16" class="w3-bar-item w3-button" onclick="classroom_search('653')" style="display:none">65304</a>
+        <a href="#" id="a17" class="w3-bar-item w3-button" onclick="classroom_search('654')" style="display:none">65401</a>
+        <a href="#" id="a18" class="w3-bar-item w3-button" onclick="classroom_search('654')" style="display:none">65402</a>
+        <a href="#" id="a19" class="w3-bar-item w3-button" onclick="classroom_search('654')" style="display:none">65403</a>
+        <a href="#" id="a20" class="w3-bar-item w3-button" onclick="classroom_search('654')" style="display:none">65407</a>
+        <a href="#" id="a21" class="w3-bar-item w3-button" onclick="classroom_search('654')" style="display:none">65409</a>
+        <a href="#" id="a22" class="w3-bar-item w3-button" onclick="classroom_search('655')" style="display:none">65501</a>
+        <a href="#" id="a23" class="w3-bar-item w3-button" onclick="classroom_search('655')" style="display:none">65502</a>
+        <a href="#" id="a24" class="w3-bar-item w3-button" onclick="classroom_search('655')" style="display:none">65503</a>
+        <a href="#" id="a25" class="w3-bar-item w3-button" onclick="classroom_search('655')" style="display:none">65504</a>
+        <a href="#" id="a26" class="w3-bar-item w3-button" onclick="classroom_search('655')" style="display:none">65505</a>
+        <a href="#" id="a27" class="w3-bar-item w3-button" onclick="classroom_search('655')" style="display:none">65507</a>
+        <a href="#" id="a28" class="w3-bar-item w3-button" onclick="classroom_search('655')" style="display:none">65508</a>
+        <a href="#" id="a29" class="w3-bar-item w3-button" onclick="classroom_search('656')" style="display:none">65601</a>
+        <a href="#" id="a30" class="w3-bar-item w3-button" onclick="classroom_search('656')" style="display:none">65602</a>
+        <a href="#" id="a31" class="w3-bar-item w3-button" onclick="classroom_search('656')" style="display:none">65603</a>
+        <a href="#" id="a32" class="w3-bar-item w3-button" onclick="classroom_search('656')" style="display:none">65604</a>
+        <a href="#" id="a33" class="w3-bar-item w3-button" onclick="classroom_search('656')" style="display:none">65605</a>
+        <a href="#" id="a34" class="w3-bar-item w3-button" onclick="classroom_search('656')" style="display:none">65607</a>
+        <a href="#" id="a35" class="w3-bar-item w3-button" onclick="classroom_search('656')" style="display:none">65608</a>
+        <a href="#" id="a36" class="w3-bar-item w3-button" onclick="classroom_search('657')" style="display:none">65701</a>
+        <a href="#" id="a37" class="w3-bar-item w3-button" onclick="classroom_search('657')" style="display:none">65702</a>
+        <a href="#" id="a38" class="w3-bar-item w3-button" onclick="classroom_search('657')" style="display:none">65703</a>
+        <a href="#" id="a39" class="w3-bar-item w3-button" onclick="classroom_search('657')" style="display:none">65704</a>
+        <a href="#" id="a40" class="w3-bar-item w3-button" onclick="classroom_search('657')" style="display:none">65705</a>
+        <a href="#" id="a41" class="w3-bar-item w3-button" onclick="classroom_search('657')" style="display:none">65707</a>
+        <a href="#" id="a42" class="w3-bar-item w3-button" onclick="classroom_search('657')" style="display:none">65708</a>
+        <a href="#" id="a43" class="w3-bar-item w3-button" onclick="classroom_search('658')" style="display:none">65801</a>
+        <a href="#" id="a44" class="w3-bar-item w3-button" onclick="classroom_search('658')" style="display:none">65802</a>
+        <a href="#" id="a45" class="w3-bar-item w3-button" onclick="classroom_search('658')" style="display:none">65803</a>
+        <a href="#" id="a46" class="w3-bar-item w3-button" onclick="classroom_search('658')" style="display:none">65804</a>
+        <a href="#" id="a47" class="w3-bar-item w3-button" onclick="classroom_search('658')" style="display:none">65805</a>
+        <a href="#" id="a48" class="w3-bar-item w3-button" onclick="classroom_search('659')" style="display:none">65901</a>
+        <a href="#" id="a49" class="w3-bar-item w3-button" onclick="classroom_search('659')" style="display:none">65902</a>
+        <a href="#" id="a50" class="w3-bar-item w3-button" onclick="classroom_search('659')" style="display:none">65903</a>
+        <a href="#" id="a51" class="w3-bar-item w3-button" onclick="classroom_search('659')" style="display:none">65904</a>
+        <a href="#" id="a52" class="w3-bar-item w3-button" onclick="classroom_search('659')" style="display:none">65905</a>
+        <a href="#" id="a53" class="w3-bar-item w3-button" onclick="classroom_search('659')" style="display:none">65912</a>
+        <a href="#" id="a54" class="w3-bar-item w3-button" onclick="classroom_search('65A')" style="display:none">65A01</a>
+        <a href="#" id="a55" class="w3-bar-item w3-button" onclick="classroom_search('65A')" style="display:none">65A02</a>
+        <a href="#" id="a56" class="w3-bar-item w3-button" onclick="classroom_search('65A')" style="display:none">65A03</a>
+        <a href="#" id="a57" class="w3-bar-item w3-button" onclick="classroom_search('65A')" style="display:none">65A04</a>
+        <a href="#" id="a58" class="w3-bar-item w3-button" onclick="classroom_search('65A')" style="display:none">65A05</a>
+        <a href="#" id="a59" class="w3-bar-item w3-button" onclick="classroom_search('65A')" style="display:none">65A13</a>
+        <a href="#" id="a60" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B01</a>
+        <a href="#" id="a61" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B02</a>
+        <a href="#" id="a62" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B03</a>
+        <a href="#" id="a63" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B04</a>
+        <a href="#" id="a64" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B06</a>
+        <a href="#" id="a65" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B05</a>
+        <a href="#" id="a66" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B07</a>
+        <a href="#" id="a67" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B08</a>
+        <a href="#" id="a68" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B09</a>
+        <a href="#" id="a69" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B10</a>
+        <a href="#" id="a70" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B11</a>
+        <a href="#" id="a71" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B12</a>
+        <a href="#" id="a72" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B13</a>
+        <a href="#" id="a73" class="w3-bar-item w3-button" onclick="classroom_search('65B')" style="display:none">65B14</a>
+        <a href="#" id="a74" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C01</a>
+        <a href="#" id="a75" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C02</a>
+        <a href="#" id="a76" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C03</a>
+        <a href="#" id="a77" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C04</a>
+        <a href="#" id="a78" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C05</a>
+        <a href="#" id="a79" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C06</a>
+        <a href="#" id="a80" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C07</a>
+        <a href="#" id="a81" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C08</a>
+        <a href="#" id="a82" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C09</a>
+        <a href="#" id="a83" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C10</a>
+        <a href="#" id="a84" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C11</a>
+        <a href="#" id="a85" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C12</a>
+        <a href="#" id="a86" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C13</a>
+        <a href="#" id="a87" class="w3-bar-item w3-button" onclick="classroom_search('65C')" style="display:none">65C14</a>
+        <a href="#" id="a88" class="w3-bar-item w3-button" onclick="classroom_search('420')" style="display:none">4201</a>
+        <a href="#" id="a89" class="w3-bar-item w3-button" onclick="classroom_search('420')" style="display:none">4202</a>
+        <a href="#" id="a90" class="w3-bar-item w3-button" onclick="classroom_search('420')" style="display:none">4203</a>
+        <a href="#" id="a91" class="w3-bar-item w3-button" onclick="classroom_search('420')" style="display:none">4204</a>
+	<a href="#" id="a92" class="w3-bar-item w3-button" onclick="classroom_search('426')" style="display:none">4260</a>
+        <a href="#" id="a93" class="w3-bar-item w3-button" onclick="classroom_search('426')" style="display:none">4261</a>
+        <a href="#" id="a94" class="w3-bar-item w3-button" onclick="classroom_search('426')" style="display:none">4263</a>
+        <a href="#" id="a95" class="w3-bar-item w3-button" onclick="classroom_search('426')" style="display:none">4264</a>
+      </div>
+    </div>
+  	<button class="w3-black w3-hover-red w3-hide-small w3-right" onclick="search_Func()"
+    style="height:27px;width:40px;margin-top:5px;margin-right:5px;border:0"><i class="fa fa-search"></i></button>
+  	<input type="text" class="w3-black w3-right" name="search" id="search" style="margin-top:5px;">
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+<!-- End Page Content -->
+</div>
+
+<script>
+
+function classroom_csie(){
+document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=24017db7-e898-40f1-842e-4848328742ff";
+document.getElementById("img").src="";
+document.getElementById("a1").style.display="block";
+document.getElementById("a2").style.display="block";
+document.getElementById("a3").style.display="block";
+document.getElementById("a4").style.display="block";
+document.getElementById("a5").style.display="block";
+document.getElementById("a6").style.display="block";
+document.getElementById("a7").style.display="block";
+document.getElementById("a8").style.display="block";
+document.getElementById("a9").style.display="block";
+document.getElementById("a10").style.display="block";
+document.getElementById("a11").style.display="block";
+document.getElementById("a12").style.display="block";
+document.getElementById("a13").style.display="block";
+document.getElementById("a14").style.display="block";
+document.getElementById("a15").style.display="block";
+document.getElementById("a16").style.display="block";
+document.getElementById("a17").style.display="block";
+document.getElementById("a18").style.display="block";
+document.getElementById("a19").style.display="block";
+document.getElementById("a20").style.display="block";
+document.getElementById("a21").style.display="block";
+document.getElementById("a22").style.display="block";
+document.getElementById("a23").style.display="block";
+document.getElementById("a24").style.display="block";
+document.getElementById("a25").style.display="block";
+document.getElementById("a26").style.display="block";
+document.getElementById("a27").style.display="block";
+document.getElementById("a28").style.display="block";
+document.getElementById("a29").style.display="block";
+document.getElementById("a30").style.display="block";
+document.getElementById("a31").style.display="block";
+document.getElementById("a32").style.display="block";
+document.getElementById("a33").style.display="block";
+document.getElementById("a34").style.display="block";
+document.getElementById("a35").style.display="block";
+document.getElementById("a36").style.display="block";
+document.getElementById("a37").style.display="block";
+document.getElementById("a38").style.display="block";
+document.getElementById("a39").style.display="block";
+document.getElementById("a40").style.display="block";
+document.getElementById("a41").style.display="block";
+document.getElementById("a42").style.display="block";
+document.getElementById("a43").style.display="block";
+document.getElementById("a44").style.display="block";
+document.getElementById("a45").style.display="block";
+document.getElementById("a46").style.display="block";
+document.getElementById("a47").style.display="block";
+document.getElementById("a48").style.display="block";
+document.getElementById("a49").style.display="block";
+document.getElementById("a50").style.display="block";
+document.getElementById("a51").style.display="block";
+document.getElementById("a52").style.display="block";
+document.getElementById("a53").style.display="block";
+document.getElementById("a54").style.display="block";
+document.getElementById("a55").style.display="block";
+document.getElementById("a56").style.display="block";
+document.getElementById("a57").style.display="block";
+document.getElementById("a58").style.display="block";
+document.getElementById("a59").style.display="block";
+document.getElementById("a60").style.display="block";
+document.getElementById("a61").style.display="block";
+document.getElementById("a62").style.display="block";
+document.getElementById("a63").style.display="block";
+document.getElementById("a64").style.display="block";
+document.getElementById("a65").style.display="block";
+document.getElementById("a66").style.display="block";
+document.getElementById("a67").style.display="block";
+document.getElementById("a68").style.display="block";
+document.getElementById("a69").style.display="block";
+document.getElementById("a70").style.display="block";
+document.getElementById("a71").style.display="block";
+document.getElementById("a72").style.display="block";
+document.getElementById("a73").style.display="block";
+document.getElementById("a74").style.display="block";
+document.getElementById("a75").style.display="block";
+document.getElementById("a76").style.display="block";
+document.getElementById("a77").style.display="block";
+document.getElementById("a78").style.display="block";
+document.getElementById("a79").style.display="block";
+document.getElementById("a80").style.display="block";
+document.getElementById("a81").style.display="block";
+document.getElementById("a82").style.display="block";
+document.getElementById("a83").style.display="block";
+document.getElementById("a84").style.display="block";
+document.getElementById("a85").style.display="block";
+document.getElementById("a86").style.display="block";
+document.getElementById("a87").style.display="block";
+document.getElementById("a88").style.display="block";
+document.getElementById("a89").style.display="block";
+document.getElementById("a90").style.display="block";
+document.getElementById("a91").style.display="block";
+document.getElementById("a92").style.display="block";
+document.getElementById("a93").style.display="block";
+document.getElementById("a94").style.display="block";
+document.getElementById("a95").style.display="block";
+}
+
+function classroom_search(name) {
+
+	if(name.search("651")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=324f8d05-b830-4e64-8842-31d42075a352";
+		document.getElementById("img").src="1F.png";
+	}
+	if(name.search("652")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=40bf2b9c-84d2-48f8-a612-661240965964";
+		document.getElementById("img").src="2F.png";
+	}
+	if(name.search("653")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=b99df4b5-137a-4b3b-8fbf-4d821f8d4d94";
+		document.getElementById("img").src="3F.png";
+	}
+	if(name.search("654")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=178ebaaa-afb4-4f60-99bf-2772dcad65f8";
+		document.getElementById("img").src="4F.png";
+	}
+	if(name.search("655")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=66431954-975e-42ec-9d6d-95a9da14e87f";
+		document.getElementById("img").src="5F.png";
+	}
+	if(name.search("656")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=ad918168-4e2d-4c60-8f01-dc862c24654a";
+		document.getElementById("img").src="6F.png";
+	}
+	if(name.search("657")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=7a51e9eb-1c5c-4dd0-bc8f-b00e7c662a60";
+		document.getElementById("img").src="7F.png";
+	}
+	if(name.search("658")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=8014f042-f6c2-4922-8b47-f63de2787677";
+		document.getElementById("img").src="8F.png";
+	}
+	if(name.search("659")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=c4c1753a-24ba-48d6-a3ef-b412fbb98389";
+		document.getElementById("img").src="9F.png";
+	}
+	if(name.search("65A")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=b4f0ce30-1825-4cc6-8fc0-b8a659fdfed4";
+		document.getElementById("img").src="10F.png";
+	}
+	if(name.search("65B")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=dda9682f-5683-4696-a6fb-6daa5d79008d";
+		document.getElementById("img").src="11F.png";
+	}
+	if(name.search("65C")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=fd5522e9-69ad-4e4c-bab8-37b0f98792ed";
+		document.getElementById("img").src="12F.png";
+	}
+	if(name.search("420")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=7cf3c2b9-0b95-487f-a65a-82d808f25ded";
+		document.getElementById("img").src="old1F.png";
+	}
+	if(name.search("426")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=92b20efd-bdcf-4aca-bc40-54f1285124f2";
+		document.getElementById("img").src="old2F.png";
+	}
+}
+
+function search_Func() {
+	var text = document.getElementById("search"); 
+	var name = text.value;
+
+	if(name.search("651")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=324f8d05-b830-4e64-8842-31d42075a352";
+		document.getElementById("img").src="1F.png";
+	}
+	if(name.search("652")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=40bf2b9c-84d2-48f8-a612-661240965964";
+		document.getElementById("img").src="2F.png";
+	}
+	if(name.search("653")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=b99df4b5-137a-4b3b-8fbf-4d821f8d4d94";
+		document.getElementById("img").src="3F.png";
+	}
+	if(name.search("654")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=178ebaaa-afb4-4f60-99bf-2772dcad65f8";
+		document.getElementById("img").src="4F.png";
+	}
+	if(name.search("655")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=66431954-975e-42ec-9d6d-95a9da14e87f";
+		document.getElementById("img").src="5F.png";
+	}
+	if(name.search("656")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=ad918168-4e2d-4c60-8f01-dc862c24654a";
+		document.getElementById("img").src="6F.png";
+	}
+	if(name.search("657")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=7a51e9eb-1c5c-4dd0-bc8f-b00e7c662a60";
+		document.getElementById("img").src="7F.png";
+	}
+	if(name.search("658")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=8014f042-f6c2-4922-8b47-f63de2787677";
+		document.getElementById("img").src="8F.png";
+	}
+	if(name.search("659")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=c4c1753a-24ba-48d6-a3ef-b412fbb98389";
+		document.getElementById("img").src="9F.png";
+	}
+	if(name.search("65A")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=b4f0ce30-1825-4cc6-8fc0-b8a659fdfed4";
+		document.getElementById("img").src="10F.png";
+	}
+	if(name.search("65B")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=dda9682f-5683-4696-a6fb-6daa5d79008d";
+		document.getElementById("img").src="11F.png";
+	}
+	if(name.search("65C")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=fd5522e9-69ad-4e4c-bab8-37b0f98792ed";
+		document.getElementById("img").src="12F.png";
+	}
+	if(name.search("420")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=7cf3c2b9-0b95-487f-a65a-82d808f25ded";
+		document.getElementById("img").src="old1F.png";
+	}
+	if(name.search("426")==0) { 
+		document.getElementById("iframe").src="https://3dwarehouse.sketchup.com/embed.html?mid=92b20efd-bdcf-4aca-bc40-54f1285124f2";
+		document.getElementById("img").src="old2F.png";
+	}
+}
+
+</script>
+
+<main>
+<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=be28edc8-685a-44e0-a947-b742c11bdc6b" id="iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="600" height="450" allowfullscreen></iframe>
+<img id="img" width="600" height="450" src="" alt="">
+</main>
+
+</body>
+</html>
